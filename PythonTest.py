@@ -21,8 +21,7 @@ class Test:
             {
                 "index": index,
                 "text": text,
-                "total_words": len(text.split()),
-                "total_characters":len(text.replace(" ",""))
+                "total_words": len(text.split())
             }
             for index, text in tuple_list
         ]
