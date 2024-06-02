@@ -162,15 +162,6 @@ def get_index():
         row = row + 63
     print(index)
 
-
-def restart_game():
-    global turn
-    reset_coins()
-    turn = 1
-    b1.configure(state='normal')
-    b2.configure(state='disabled')
-    start_game()
-
 def pause_game():
     global paused
     paused = True
@@ -194,7 +185,7 @@ pos2 = None
 paused = False
 
 Ladders = {3: 21, 8: 30, 28: 84, 58: 77, 75: 86, 80: 100, 90: 91}
-snakes = {17: 12, 52: 29, 57: 40, 62: 22, 88: 18, 95: 51, 97: 79}
+snakes = {17: 13, 52: 29, 57: 40, 62: 22, 88: 18, 95: 51, 97: 79}
 
 root = tk.Tk()
 root.geometry("1200x800")
