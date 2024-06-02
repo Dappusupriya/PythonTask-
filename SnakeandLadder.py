@@ -103,34 +103,6 @@ def roll_dice_continued(r):
     speak("player - " + str(turn) + " turn ")
     is_winner()
 
-
-def roll_dice_callback(r):
-    global turn, pos1, pos2, b1, b2
-    ladder = 0  # no ladder
-    snakes = 0
-    if turn == 1:
-        if (pos1 + r) <= 100:
-            pos1 = pos1 + r
-        ladder = check_Ladder(turn)
-        check_snake(turn)
-        move_coin(turn, pos1)
-        if r != 6 and ladder != 1 and snakes == 1:
-            turn = 2
-            b1.configure(state='disabled')
-            b2.configure(state='normal')
-    else:
-        if (pos2 + r) <= 100:
-            pos2 = pos2 + r
-        ladder = check_Ladder(turn)
-        check_snake(turn)
-        move_coin(turn, pos2)
-        if r != 6 and ladder != 1 and snakes == 1:
-            turn = 1
-            b2.configure(state='disabled')
-            b1.configure(state='normal')
-    speak("player - " + str(turn) + " turn ")
-    is_winner()
-
 def is_winner():
     global pos1, pos2
     if pos1 == 100:
